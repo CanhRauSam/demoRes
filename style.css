@@ -79,7 +79,7 @@ header nav .logo {
 
 header nav .logo a {
   color: #ac8949;
-  text-shadow: 2px 2px #f2ba7b, 5px 3px 2px #ac8949;
+  font-weight: 600;
 }
 
 header nav ul .icon {
@@ -619,25 +619,29 @@ header .header__text div a:hover {
   margin-left: 0;
 }
 
-#reservation .reservation__title form .reservation__form .res__submit input {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  background-color: #e62e2d;
-  cursor: pointer;
-  height: 35px;
-  width: 120px;
-  border: none;
-  color: white;
-  font-size: 0.7rem;
-  padding-left: 0px;
-  border-radius: 5px;
+#reservation .reservation__title form .reservation__form .res__submit {
+  margin-left: 10px;
+  display: inline-block;
 }
 
-#reservation .reservation__title form .reservation__form .res__submit input:hover {
-  -webkit-box-shadow: 3px 5px 5px black;
-          box-shadow: 3px 5px 5px black;
+#reservation .reservation__title form .reservation__form .res__submit a {
+  background-color: #e62e2d;
+  cursor: pointer;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding: 8px 17px;
+  border-radius: 2px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  display: inline-block;
+}
+
+#reservation .reservation__title form .reservation__form .res__submit a:hover {
   -webkit-transform: translate(-2px, -2px);
           transform: translate(-2px, -2px);
+  -webkit-box-shadow: 4px 3px 10px black;
+          box-shadow: 4px 3px 10px black;
 }
 
 #chiefs {
@@ -840,12 +844,11 @@ header .header__text div a:hover {
 }
 
 #subscribe .subs__input {
-  max-width: 1200px;
   width: 500px;
   background-color: #ffffff;
   text-align: center;
   margin: 50px auto 0;
-  padding: 7px;
+  padding: 5px 7px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -857,7 +860,7 @@ header .header__text div a:hover {
           justify-content: space-between;
 }
 
-#subscribe .subs__input input {
+#subscribe .subs__input .subs__email {
   outline: none;
   border: none;
   -webkit-box-flex: 1;
@@ -865,7 +868,7 @@ header .header__text div a:hover {
           flex: 1;
 }
 
-#subscribe .subs__input a {
+#subscribe .subs__input .subs__submit {
   color: white;
   padding: 7px;
   background: #e62e2d;
@@ -875,20 +878,23 @@ header .header__text div a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-}
-
-#subscribe .subs__input a input {
   cursor: pointer;
-  background-color: #e62e2d;
-  color: #ffffff;
 }
 
-#subscribe .subs__input a ion-icon {
+#subscribe .subs__input .subs__submit span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+#subscribe .subs__input .subs__submit span ion-icon {
   font-size: 1rem;
   margin-left: 5px;
 }
@@ -1460,6 +1466,15 @@ header .header__text div a:hover {
 }
 
 @media screen and (max-width: 550px) {
+  header nav.sticky {
+    padding: 0px 30px;
+  }
+  header nav.sticky .menu__btn {
+    right: 50px;
+  }
+  header nav .logo {
+    font-size: 1.5rem;
+  }
   #discover {
     padding-bottom: 0;
   }
@@ -1489,7 +1504,7 @@ header .header__text div a:hover {
     line-height: 35px;
     padding-left: 10px;
   }
-  #subscribe form .subs__input a {
+  #subscribe form .subs__input .subs__submit {
     width: auto;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -1499,16 +1514,16 @@ header .header__text div a:hover {
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
-  #subscribe form .subs__input a input {
+  #subscribe form .subs__input .subs__submit span {
     background-color: none;
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  #subscribe form .subs__input a:hover {
+  #subscribe form .subs__input .subs__submit:hover {
     color: #e62e2d;
     background-color: transparent;
   }
-  #subscribe form .subs__input a:hover input {
+  #subscribe form .subs__input .subs__submit:hover span {
     background-color: transparent;
     color: #e62e2d;
   }

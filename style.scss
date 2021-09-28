@@ -85,7 +85,7 @@
         font-family: "Pacifico", cursive;
         a {
           color: $primaryColor;
-          text-shadow: 2px 2px $thirdColor, 5px 3px 2px $primaryColor;
+          font-weight: 600;
         }
       }
       ul {
@@ -466,23 +466,22 @@
             }
           }
           .res__submit {
-            input{
-              transition: all 0.5s;
+            margin-left: 10px;
+            display: inline-block;
+            a{
               background-color: $secondaryColor;
               cursor: pointer;
-              height: 35px;
-              width: 120px;
-              border: none;
               color: white;
-              font-size: 0.7rem;
-              padding-left: 0px;
-              border-radius: 5px;
+              font-size: 0.8rem;
+              font-weight: 300;
+              padding: 8px 17px;
+              border-radius: 2px;
+              transition: all 0.5s;
+              display: inline-block;
             }
-          }
-          .res__submit{
-            input:hover {
-              box-shadow: 3px 5px 5px rgba(0, 0, 0, 1);
+            a:hover {
               transform: translate(-2px, -2px);
+              box-shadow: 4px 3px 10px rgba(0, 0, 0, 1);
             }
           }
         }
@@ -635,34 +634,33 @@
       }
     }
     .subs__input {
-      max-width: 1200px;
       width: 500px;
       background-color: $whiteColor;
       text-align: center;
       margin: 50px auto 0;
-      padding: 7px;
+      padding: 5px 7px;
       @include centerAlign();
       justify-content: space-between;
-      input {
+      .subs__email {
         outline: none;
         border: none;
         flex: 1;
       }
-      a {
+      .subs__submit {
         color: white;
         padding: 7px;
         background: $secondaryColor;
         @include centerAlign();
-        justify-content: space-between;
         flex-shrink: 0;
-        input {
-          cursor: pointer;
-          background-color: $secondaryColor;
-          color: $whiteColor;
-        }
-        ion-icon {
-          font-size: 1rem;
-          margin-left: 5px;
+        cursor: pointer;
+        span {
+          @include centerAlign();
+          font-size: 0.8rem;
+          font-weight: 300;
+          ion-icon {
+            font-size: 1rem;
+            margin-left: 5px;
+          }
         }
       }
     }
@@ -1205,6 +1203,19 @@
     }
   }
   @media screen and (max-width: 550px) {
+    header {
+      nav.sticky{
+        padding: 0px 30px;
+        .menu__btn{
+          right: 50px;
+        }
+      }
+      nav {
+        .logo {
+          font-size: 1.5rem;
+        }
+      }
+    }
     #discover{
       padding-bottom: 0;
       .discover__box{
@@ -1242,22 +1253,21 @@
             line-height: 35px;
             padding-left: 10px;
           }
-          a{
+          .subs__submit{
             width: auto;
             display: inline-flex;
             margin: 20px auto;
             border: 1px solid $secondaryColor;
             transition: all 0.2s;
-            input{
+            span{
               background-color: none;
               transition: 0.5s;
             }
           }
-          a:hover{
+          .subs__submit:hover{
             color: $secondaryColor;
             background-color: transparent;
-            
-            input{
+            span{
               background-color: transparent;
               color: $secondaryColor;
             }
